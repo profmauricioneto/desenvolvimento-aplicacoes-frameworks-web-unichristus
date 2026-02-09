@@ -1,0 +1,19 @@
+ALGORITMO media_aluno
+
+declare nota1, nota2, media: numéricos
+
+escreva("Digite a primeira nota: ")
+leia(nota1)
+
+escreva("Digite a segunda nota: ")
+leia(nota2)
+
+media = (nota1 + nota2)/2
+escreva("A media do aluno é: ", media)
+
+se (media >= 5):
+    escreva("Aprovado")
+senao:
+    escreva("Reprovado")
+
+FIM_ALGORITMO

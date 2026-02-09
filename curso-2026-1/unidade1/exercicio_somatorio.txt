@@ -1,0 +1,17 @@
+ALGORITMO
+
+DECLARE soma, contador, qtdTermos: numérico
+soma = 0
+contador = 1
+
+escreva("Digite a quantidade de termos a serem somados: ")
+leia(qtdTermos)
+
+enquanto (contador <= qtdTermos) FAÇA
+    soma = soma + contador
+    contador = contador + 1
+fim_enquanto
+
+escreva("O valor do somatório é: ", soma)
+
+FIM_ALGORITMO
