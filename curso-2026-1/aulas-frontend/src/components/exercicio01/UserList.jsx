@@ -12,7 +12,9 @@ const UserList = () => {
 
   return (
     <>
-      <h2>Lista de Usuários da Aplicação!</h2>
+      <h2 className="text-center text-4xl p-6">
+        Lista de Usuários da Aplicação!
+      </h2>
       <div>
         {userlist.map((u, index) => (
           <User key={index} name={u.name} age={u.age} />
