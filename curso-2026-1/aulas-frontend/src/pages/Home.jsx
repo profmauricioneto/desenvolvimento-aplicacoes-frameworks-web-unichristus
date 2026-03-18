@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Contacts = () => {
+const Home = () => {
   return (
     <>
-      <h1>Meus Contatos</h1>
+      <h1 className="font-bold text-4xl text-center p-4">Bem vindo ao Site</h1>
 
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni deleniti
@@ -29,4 +29,4 @@ const Contacts = () => {
   );
 };
 
-export default Contacts;
+export default Home;
