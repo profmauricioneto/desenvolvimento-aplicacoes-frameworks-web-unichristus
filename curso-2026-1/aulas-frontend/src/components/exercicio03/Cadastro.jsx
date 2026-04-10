@@ -34,42 +34,39 @@ const Cadastro = () => {
     }
 
     return (
-        <div className='m-4 p-2 border-1 rounded-2xl border-gray-500 text-center'>
-            <h2 className='text-2xl font-bold'>Cadastro de Usuário</h2>
-            <form onSubmit={handleSubmit}>
-                <div className='p-3'>
-                    <input 
-                        type="text"
-                        placeholder='Nome Completo'
-                        name='nomeCompleto'
-                        value={nome}
-                        onChange={handleChange}
-                        className='border-1 rounded-md border-gray-400 w-full p-2 focus:ring-2 ring-blue-500'
-                    />             
-                </div>
+        <div className='mx-auto my-8 w-[min(92vw,460px)] rounded-2xl border border-slate-200 bg-linear-to-b from-white to-slate-50 p-6 shadow-lg shadow-slate-900/10'>
+            <h2 className='mb-4 text-center text-2xl font-bold text-slate-900'>Cadastro de Usuário</h2>
+            <form onSubmit={handleSubmit} className='grid gap-3'>
+                <input 
+                    type="text"
+                    placeholder='Nome Completo'
+                    name='nomeCompleto'
+                    value={nome}
+                    onChange={handleChange}
+                    className='w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-[0.98rem] text-slate-900 placeholder:text-slate-400 outline-none transition focus:border-blue-600 focus:ring-3 focus:ring-blue-500/20'
+                />
 
-                <div>
-                    <input 
-                        type="email" 
-                        placeholder='usuario@email.com'
-                        name='email'
-                        value={email}
-                        onChange={handleChange}    
-                    />
-                </div>
+                <input 
+                    type="email" 
+                    placeholder='usuario@email.com'
+                    name='email'
+                    value={email}
+                    onChange={handleChange}
+                    className='w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-[0.98rem] text-slate-900 placeholder:text-slate-400 outline-none transition focus:border-blue-600 focus:ring-3 focus:ring-blue-500/20'
+                />
 
-                <div>
-                    <input 
-                        type="password"
-                        placeholder='senha forte'
-                        name='senha'
-                        value={senha}
-                        onChange={handleChange}
-                    />
-                </div>
-                {erro && <div>{erro}</div>}
+                <input 
+                    type="password"
+                    placeholder='senha forte'
+                    name='senha'
+                    value={senha}
+                    onChange={handleChange}
+                    className='w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-[0.98rem] text-slate-900 placeholder:text-slate-400 outline-none transition focus:border-blue-600 focus:ring-3 focus:ring-blue-500/20'
+                />
+                {erro && <p className='rounded-md border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-700'>{erro}</p>}
 
-                <button type='submit'>Enviar</button>
+                <button type='submit' className='mt-1 w-full cursor-pointer rounded-lg border-none bg-linear-to-r from-blue-600 to-blue-700 px-4 py-3 text-base font-semibold text-white transition hover:brightness-110 active:scale-[0.99]'>Enviar</button>
+            
             </form>
         </div>
     )
