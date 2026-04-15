@@ -5,8 +5,11 @@
 // import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 // import Counter from './components/Counter';
 // import Form from './components/ExampleForm';
-import Cadastro from './components/exercicio03/Cadastro';
+// import Cadastro from './components/exercicio03/Cadastro';
+// import Login from './components/exercicio03/Login';
 // import ProductList from './components/exercicio_revisao/ProductList';
+import GetPosts from "./components/exercicio04/GetPosts";
+
 
 const App = () => {
   // const listProducts = [
@@ -21,9 +24,21 @@ const App = () => {
 
   return (
     <>
+      <GetPosts />
+
       {/* <Counter /> */}
       {/* <Form /> */}
-      <Cadastro />
+      {/* <Cadastro /> */}
+      {/* <Login /> */}
+
+      {/* <Router>
+        <Routes>
+          <Route path='/' element={<Home/>} />
+          <Route path='/cadastro' element={<Cadastro />} />
+          <Route path='/login' element={<Login />} />
+        </Routes>
+      </Router> */}
+
     </>
 
     // <>
