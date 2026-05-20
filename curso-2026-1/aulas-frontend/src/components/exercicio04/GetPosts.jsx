@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
+import Post from "./Post";
 
 const GetPosts = () => {
-
     const [post, setPost] = useState([]);
 
     useEffect(() => {
@@ -10,15 +10,17 @@ const GetPosts = () => {
         .then((resp) => resp.json())
         .then((data) => {
             setPost(data)
-            console.log(post);
+            console.log('Dado recebido', post);
         })
     },[])
 
     return (
-        <div>
-
-        </div>
-    )
+      <div>
+        {post.map((p, index) => (
+          <Post key={index} userId={p.userId} title={p.title} body={p.body} />
+        ))}
+      </div>
+    );
 }
 
 export default GetPosts;

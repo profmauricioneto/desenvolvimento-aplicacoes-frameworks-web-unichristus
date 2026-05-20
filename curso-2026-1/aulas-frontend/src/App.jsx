@@ -8,7 +8,9 @@
 // import Cadastro from './components/exercicio03/Cadastro';
 // import Login from './components/exercicio03/Login';
 // import ProductList from './components/exercicio_revisao/ProductList';
-import GetPosts from "./components/exercicio04/GetPosts";
+// import GetPosts from "./components/exercicio04/GetPosts";
+
+import ExamploCounter from "./components/exercicio05/ExamploCounter";
 
 
 const App = () => {
@@ -24,7 +26,9 @@ const App = () => {
 
   return (
     <>
-      <GetPosts />
+      <ExamploCounter />
+
+      {/* <GetPosts /> */}
 
       {/* <Counter /> */}
       {/* <Form /> */}

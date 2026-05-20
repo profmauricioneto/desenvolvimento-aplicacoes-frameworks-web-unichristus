@@ -1,39 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import useCadastroStore from '../../stores/useCadastroStore';
 
 const Cadastro = () => {
 
-    useEffect(() => {
-        console.log(`O componente foi inicializado!`);
-        return () => {
-            console.log(`Componente destruído!`);
-        }
-    });
-
     const navigate = useNavigate();
 
-    const [nome, setNome] = useState('');
-    const [email, setEmail] = useState('');
-    const [senha, setSenha] = useState('');
-    const [erro, setErro] = useState('');
-
-    // const [campos, setCampos] = useState({
-    //     nome: '',
-    //     email: '',
-    //     senha: '',
-    // });
+    // extração dos dados usando o zustand
+    const { nome, email, senha, erro, setNome, setEmail, setSenha, setErro, submitCadastro } = useCadastroStore();
 
     const handleSubmit = (e) => {
         e.preventDefault();
         setErro('');
-        if (!nome || !email || !senha) {
-            setErro('Campo(s) obrigatório vazio!');
-        } else {
-            console.log(`Enviando dados para servidor: ${nome}, ${email}, ${senha}}`);
-            setNome('');
-            setEmail('');
-            setSenha('');
-        }
+        submitCadastro();
     }
 
     const handleChange = (e) => {
