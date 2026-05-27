@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js",
-    "exercicio1": "nodemon exercicios/exercicio01.js"
+    "exercicio1": "nodemon exercicios/exercicio01.js",
+    "exercicioapi": "nodemon exercicios/exercicio-api.js"
   },
   "keywords": [],
   "author": "",
