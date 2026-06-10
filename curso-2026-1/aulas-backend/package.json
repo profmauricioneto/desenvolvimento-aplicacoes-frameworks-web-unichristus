@@ -7,16 +7,22 @@
     "start": "nodemon server.js",
     "exercicio1": "nodemon exercicios/exercicio01.js",
     "exercicioapi": "nodemon exercicios/exercicio-api.js",
-    "exerciciomvc": "nodemon exercicios/exercicio-mvc/main.js"
+    "exerciciomvc": "nodemon exercicios/exercicio-mvc/main.js",
+    "exerciciobd": "nodemon exercicios/exercicio-bd/main.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "express": "^5.2.1"
+    "@prisma/adapter-pg": "^7.8.0",
+    "@prisma/client": "^7.8.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "pg": "^8.21.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.14"
+    "nodemon": "^3.1.14",
+    "prisma": "^7.8.0"
   }
 }

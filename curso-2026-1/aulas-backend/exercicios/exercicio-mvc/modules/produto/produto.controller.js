@@ -1,6 +1,4 @@
 const produtosModelo = require('./produto.model.js');
-// const express = require('express');
-// const app = express();
 
 const mostrarProdutosController = (req, res) => {
     console.log(`mostrar produtos`);
@@ -32,6 +30,9 @@ const adicionarProdutoController = (req, res) => {
     try {
         const {nome, preco, descricao} = req.body;
         const novoProduto = produtosModelo.adicionarProduto(nome, preco, descricao);
+        if (!novoProduto) {
+            console.error(`Erro ao adicionar produto a base!`);
+        }
         res.json({message: `Produto adicionado com sucesso!`, produto: novoProduto})
     } catch (error) {
         console.error(`Não possível adicionar o produto, ${error}`);
@@ -39,8 +40,31 @@ const adicionarProdutoController = (req, res) => {
     }
 }
 
+const deletarProdutoController = (req, res) => {
+    try {
+        const id = parseInt(req.params.id);
+        produtosModelo.deletarProduto(id);
+    } catch (error) {
+        console.error(`Não possível deletar o produto, ${error}`);
+        res.json({ message: `Não possível deletar o produto` }); 
+    }
+}
+
+const atualizarProdutoController = (req, res) => {
+    try {
+        const {nome, preco, descricao} = req.body;
+        const id = parseInt(req.params.id);
+        produtosModelo.atualizarProduto(nome, preco, descricao, id);
+    } catch (error) {
+        console.error(`Não possível atualizar o produto, ${error}`);
+        res.json({ message: `Não possível atualizar o produto` });   
+    }
+}
+
 module.exports = {
     adicionarProdutoController,
     mostrarProdutosController,
     buscarProdutoPorIdController,
+    atualizarProdutoController,
+    deletarProdutoController,
 }
