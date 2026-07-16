@@ -1,3 +1,7 @@
+<div>
+    <img src="./assets/logo_unichristus.jpg" style="width: 70%; height: auto;"/>
+</div>
+
 <h2 style="text-align: center">  
   <b>Desenvolvimento de Aplicações com Frameworks Web</b> 
   <br/>
