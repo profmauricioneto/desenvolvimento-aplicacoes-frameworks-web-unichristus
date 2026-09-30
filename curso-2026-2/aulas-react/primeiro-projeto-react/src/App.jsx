@@ -4,8 +4,11 @@
 // import Contact from './pages/Contact';
 // import NavigationBar from './components/NavigationBar';
 
-import TaskList from "./components/Exercicios3/TaskList";
-import UsandoChildren from "./components/UsandoChildren";
+// import TaskList from "./components/Exercicios3/TaskList";
+// import UsandoChildren from "./components/UsandoChildren";
+
+import ContadorCliques from "./components/Hooks/ContadorCliques";
+import ExemploInput from "./components/Hooks/ExemploInput";
 
 const App = () => {
     return (
@@ -18,8 +21,11 @@ const App = () => {
       //   </Routes>
       // </Router>
       <>
-        <TaskList />
-        <UsandoChildren />
+        {/* <TaskList />
+        <UsandoChildren /> */}
+
+        <ContadorCliques />
+        <ExemploInput />
       </>
     );
 }
