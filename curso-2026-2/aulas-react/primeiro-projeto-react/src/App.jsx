@@ -7,8 +7,10 @@
 // import TaskList from "./components/Exercicios3/TaskList";
 // import UsandoChildren from "./components/UsandoChildren";
 
-import ContadorCliques from "./components/Hooks/ContadorCliques";
-import ExemploInput from "./components/Hooks/ExemploInput";
+// import ContadorCliques from "./components/Hooks/ContadorCliques";
+// import ExemploInput from "./components/Hooks/ExemploInput";
+
+import Cadastro from "./components/exercicio-cadastro/Cadastro";
 
 const App = () => {
     return (
@@ -24,8 +26,11 @@ const App = () => {
         {/* <TaskList />
         <UsandoChildren /> */}
 
-        <ContadorCliques />
-        <ExemploInput />
+        {/* <ContadorCliques />
+        <ExemploInput /> */}
+
+        <Cadastro />
+        
       </>
     );
 }
