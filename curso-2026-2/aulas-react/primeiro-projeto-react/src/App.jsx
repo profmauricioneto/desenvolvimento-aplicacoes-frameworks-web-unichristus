@@ -1,4 +1,4 @@
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import About from './pages/About';
 // import Home from './pages/Home';
 // import Contact from './pages/Contact';
@@ -10,8 +10,8 @@
 // import ContadorCliques from "./components/Hooks/ContadorCliques";
 // import ExemploInput from "./components/Hooks/ExemploInput";
 
-import Cadastro from "./components/exercicio-cadastro/Cadastro";
-
+import Cadastro from "./components/ExercicioCadastro/Cadastro";
+import Login from "./components/ExercicioCadastro/Login";
 const App = () => {
     return (
       // <Router>
@@ -23,14 +23,18 @@ const App = () => {
       //   </Routes>
       // </Router>
       <>
+        <Router>
+          <Routes>
+            <Route path="/login" element={<Login />} />
+            <Route path="/cadastro" element={<Cadastro />} />
+          </Routes>
+        </Router>
+
         {/* <TaskList />
         <UsandoChildren /> */}
 
         {/* <ContadorCliques />
         <ExemploInput /> */}
-
-        <Cadastro />
-        
       </>
     );
 }

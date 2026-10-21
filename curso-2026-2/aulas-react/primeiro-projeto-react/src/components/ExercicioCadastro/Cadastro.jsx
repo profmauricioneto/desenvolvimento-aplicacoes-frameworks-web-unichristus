@@ -1,6 +1,9 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Cadastro = () => {
+
+    const navigate = useNavigate();
 
     const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');
@@ -20,8 +23,20 @@ const Cadastro = () => {
         e.preventDefault();
         if (!nome || !email || !username || !senha) {
             setErro(true);
-        }
+        } else {
+          console.log('Dados do Usuário:');
+          console.log(
+            `{nome: ${nome}, email: ${email}, username: ${username}, senha: ${senha}`
+          );
 
+          setNome('');
+          setEmail('');
+          setUserName('');
+          setSenha('');
+          setErro(false);
+
+          navigate('/login');
+        }
     }
 
     // const [dados, setDados] = useState({
@@ -33,7 +48,7 @@ const Cadastro = () => {
     return (
       <>
         <div className="mx-auto my-8 w-[min(92vw,460px)] rounded-2xl border border-black-200 bg-linear-to-b from-white to-slate-50 p-6 shadow-lg shadow-black-900/10">
-          <form className="grid gap-3">
+          <form className="grid gap-3" onSubmit={submitData}>
             <h2 className="mb-4 text-center text-2xl font-bold text-slate-900">
               Cadastro
             </h2>
@@ -82,8 +97,17 @@ const Cadastro = () => {
               Enviar
             </button>
 
-            {erro && <p className="text-red-800 text-bold">Campos Obrigatórios Vazios</p>}
+            {erro && (
+              <p className="text-red-800 text-bold">
+                Campos Obrigatórios Vazios
+              </p>
+            )}
           </form>
+
+          <p className="p-2 text-center">
+            Já tem cadastrado?{' '}
+            <button className="text-blue-700" onClick={() => navigate('/login')}>Faça seu login</button>
+          </p>
         </div>
       </>
     );
