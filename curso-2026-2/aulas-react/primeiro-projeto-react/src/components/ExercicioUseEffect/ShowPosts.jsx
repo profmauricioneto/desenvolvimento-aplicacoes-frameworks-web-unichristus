@@ -4,13 +4,10 @@ const ShowPosts = () => {
 
     const [posts, setPosts] = useState([]);
 
-    const async fetchData() {
-        const response = await fetch('https://jsonplaceholder.typicode.com/posts');
-        const postsJson = await response.json();
-    }
-
     useEffect(() => {
         try {
+            console.log('Carregando os dados via API');
+            fetch('https://jsonplaceholder.typicode.com/posts')
             
         } catch (error) {
             console.error('Error ao carregar dados:');
