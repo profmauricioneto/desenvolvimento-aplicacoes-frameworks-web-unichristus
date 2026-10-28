@@ -12,6 +12,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Cadastro from "./components/ExercicioCadastro/Cadastro";
 import Login from "./components/ExercicioCadastro/Login";
+import ShowPosts from './components/ExercicioUseEffect/ShowPosts';
 const App = () => {
     return (
       // <Router>
@@ -27,6 +28,7 @@ const App = () => {
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/cadastro" element={<Cadastro />} />
+            <Route path="/posts" element={<ShowPosts />}/>
           </Routes>
         </Router>
 
