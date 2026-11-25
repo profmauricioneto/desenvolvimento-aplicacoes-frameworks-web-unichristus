@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node src/main.js",
     "dev": "nodemon src/main.js",
+    "api": "nodemon exercicio-api/api.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
